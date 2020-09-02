@@ -1,17 +1,24 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
 
-{% block title %}Detail{% endblock title %} 
+{% block title %}Detail{% endblock title %}
 
 {% block content %}
-    <p>{{destination.name}}</p>
-    <p>{{destination.description}}</p>
-    <p>{{destination.activities}}</p>
-    <p><img src="{{destination.pretty_picture.url}}"></p>
-    <p>{{destination.optimal_visiting_season}}</p>
-    <a href="{% url 'destination-update' destination.id %}">
-        <button>Update</button>
-    </a>
-    <a href="{% url 'destination-delete' destination.id %}">
-        <button>Delete</button>
-    </a>
+  <div class="card bg-dark text-white shadow-lg">
+    <img src="{{destination.pretty_picture.url}}" class="card-img" alt="{{destination.name}}">
+    <div class="card-img-overlay">
+      <h1 class="card-title display-1 font-weight-bold text-center">{{destination.name}}</h1>
+      <h3 class="card-text text-center">{{destination.activities}}</h3>
+    </div>
+  </div>
+  <div class="info text-white text-center shadow-lg">
+    <br>
+    <h3>{{destination.description}}</h3>
+    <h3>The optimal season for visiting {{destination.name}} is {{destination.optimal_visiting_season}}.</h3>
+    <p>Something's wrong with these information?</p>
+    <p>Go ahead and fix it.</p>
+    <a href="{% url 'destination-update' destination.id %}" class="btn btn-outline-light text-light btn-block">Update</a>
+    <a href="{% url 'destination-delete' destination.id %}" class="btn btn-outline-light text-light btn-block">Delete</a>
+  </div>
+
+
 {% endblock content %}

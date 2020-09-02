@@ -1,0 +1,44 @@
+.cover {
+  background: url("/static/images/bg-2-01.png");
+  background-repeat: no-repeat;
+  background-color: #062136;
+  background-size: 100%;
+  display: flex;
+  background-attachment: fixed;
+  image-opacity: 0.5;
+}
+
+nav.navbar{
+  background-color: rgba(6, 33, 54, .9)
+}
+
+div.intro{
+  padding-top: 28rem;
+  padding-bottom: 5rem;
+}
+
+div.content{
+  padding-top:40rem;
+}
+
+div.info{
+  padding-bottom: 7rem;
+  padding-right: 7rem;
+  padding-left: 7rem;
+}
+
+div.jumbotron.transperant, .card{
+  background-color:rgba(0, 0, 0, .0)
+}
+
+div.dropdown-menu{
+  background-color:#062136;
+}
+
+a.dropdown-item{
+  color:white;
+}
+
+hr{
+  border-top:1px solid;
+}
